@@ -1,0 +1,70 @@
+html{
+  height: 100vh;
+}
+
+body{
+  height: inherit;  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+  flex: 1;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-icon{
+  margin: 1em;
+}
+
+.title-with-logo{
+    display: flex;
+  flex-direction: row;
+  padding: .5em 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-logo{
+  height: 2em;
+  margin-right: 1em;
+}
+
+.header-title{
+  margin: 0;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav-list li{
+  padding: .25em;
+  flex: 1 1;
+  border: 1px solid #494949;
+}

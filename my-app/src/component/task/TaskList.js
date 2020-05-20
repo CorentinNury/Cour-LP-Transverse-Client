@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class TaskList extends Component {
     render() {
-      return <h2>List of all task</h2>;
+      return <h2>Liste de toute les taches</h2>;
     }
 }
 

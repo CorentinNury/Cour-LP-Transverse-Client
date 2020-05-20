@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class HomePage extends Component {
     render() {
-      return <h2>Home page</h2>;
+      return <h2>Ma page d'acceuil</h2>;
     }
 }
 

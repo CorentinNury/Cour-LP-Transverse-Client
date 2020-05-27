@@ -9,27 +9,13 @@ import TaskDetail from "./component/task/TaskDetail";
 import ProjectList from "./component/project/ProjectList";
 import ProjectDetail from "./component/project/ProjectDetail";
 import Header from "./component/common/Header";
+import Navbar from "./component/common/Navbar";
 
 function App() {
   return (
     <div className="App">   
     <Header/>   
-      <nav>
-        <ul className="nav-list">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/me">Profile</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/tasks">Tasks</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navbar/>
       <Switch>
         <Route path="/home">
           <HomePage />

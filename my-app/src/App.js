@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">   
     <Header/>   
-      <Navbar/>
-      <Switch>
+     
+      <Switch className="flex-1">
         <Route path="/home">
           <HomePage />
         </Route>
@@ -39,6 +39,7 @@ function App() {
           <ProjectDetail />
         </Route>
       </Switch>
+      <Navbar/>
     </div>
   );
 }

@@ -1,25 +1,30 @@
 import React, { Component } from "react";
-
+import { FaRegUserCircle, FaHome, FaProjectDiagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-class Navbar extends React.Component {
-
+class Navbar extends Component {
   render() {
     return (
       <nav>
         <ul className="nav-list">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/me">Profile</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/tasks">Tasks</Link>
-          </li>
+          <Link to="/home">
+            <li>
+              <FaHome />
+              <p>Home</p>
+            </li>
+          </Link>
+          <Link to="/me">
+            <li>
+              <FaRegUserCircle />
+              <p>Profile</p>
+            </li>
+          </Link>
+          <Link to="/projects">
+            <li>
+              <FaProjectDiagram />
+              <p>Projects</p>
+            </li>
+          </Link>
         </ul>
       </nav>
     );

@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 class ProfilPage extends Component {
     render() {
-      return <h2>Ma page</h2>;
+      return (
+        <div className="container">
+          <h4>My page</h4>
+        </div>
+      );
     }
 }
 

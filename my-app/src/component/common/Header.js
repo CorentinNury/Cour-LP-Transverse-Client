@@ -26,7 +26,7 @@ class HomePage extends React.Component {
         </div>
         
         <div>
-          <FaRegUserCircle className="navbar-icon" />
+          <p>PROJET APP Web Transverse</p>
         </div>
         <div>
           <FaRegUserCircle className="navbar-icon" />

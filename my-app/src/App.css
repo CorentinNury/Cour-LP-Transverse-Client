@@ -24,7 +24,6 @@ body{
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -94,4 +93,22 @@ body{
   right: 4em;
   padding: 1em;
   background: #494949;
+}
+
+.status-ok {
+  background: forestgreen;
+  border-radius: 3px;
+  padding: 0.1em 0.5em;
+}
+
+.status-error {
+  background: tomato;
+  border-radius: 3px;
+  padding: 0.1em 0.5em;
+}
+
+.status-warning {
+  background: orange;
+  border-radius: 3px;
+  padding: 0.1em 0.5em;
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "../../logo.svg";
 import { FiMenu } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { withRouter,Link } from "react-router-dom";
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +11,7 @@ class HomePage extends React.Component {
     };
 
     this.toggleNavbar.bind(this);
+    this.handleClick.bind(this);
   }
 
   toggleNavbar() {
@@ -18,15 +19,18 @@ class HomePage extends React.Component {
       navbarOpen: !this.state.navbarOpen
     });
   }
+  handleClick(){
+    this.props.history.push("/home")
+  }
   render() {
     return (
       <div className="header">
         <div onClick={() => this.toggleNavbar()}>
           <FiMenu className="navbar-icon" />
         </div>
-        
-        <div>
-          <p>PROJET APP Web Transverse</p>
+        <div className="title-with-logo" onClick={() => this.handleClick()}>
+          <img src={logo} className="app-logo" alt="logo" />
+          <h2 className="header-title">Project App</h2>
         </div>
         <div>
           <FaRegUserCircle className="navbar-icon" />

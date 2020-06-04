@@ -51,6 +51,9 @@ class HomePage extends Component {
           <li><strong>GetTasksList</strong>: get all the tasks by project</li>
           <li><strong>GetTask</strong>: get a task by id</li>
         </ul>
+        <p>Database: Mongo db</p>
+        <p>API: <button><a href="http://localhost:4000/" style={{color:"lightseagreen"}}>graphql</a></button></p>
+        <p>Icon: react-icon</p>
       </div>
     
     );

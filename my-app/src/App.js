@@ -8,6 +8,7 @@ import TaskList from "./component/task/TaskList";
 import TaskDetail from "./component/task/TaskDetail";
 import ProjectList from "./component/project/ProjectList";
 import ProjectDetail from "./component/project/ProjectDetail";
+import ProjectCreate from "./component/project/ProjectCreate";
 import Header from "./component/common/Header";
 import Navbar from "./component/common/Navbar";
 
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/project/:id">
           <ProjectDetail />
+        </Route>
+        <Route path="/new-project">
+            <ProjectCreate />
         </Route>
       </Switch>
       <Navbar/>

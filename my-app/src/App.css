@@ -7,6 +7,7 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #101d40 !important;
 }
 
 
@@ -36,6 +37,7 @@ body{
 
 .navbar-icon{
   margin: 1em;
+  
 }
 
 .title-with-logo{
@@ -70,6 +72,8 @@ body{
   padding: 1em;
   flex: 1;
   overflow: auto;
+  text-align: center;
+
 }
 
 .sidebar{
@@ -77,9 +81,10 @@ body{
   left: 0;
   top: 0;
   bottom: 0;
-  right: 4em;
+  right: 70%;
   padding: 1em;
-  background: #494949;
+  text-align: center;
+   background: #101d40;
 }
 
 .status-ok {
@@ -110,4 +115,26 @@ ul{
   padding: .25em 1.5em;    
   background: #122041;
   margin-bottom: 1em;
+}
+
+.btn{
+  margin: 10px !important;
+}
+
+select{
+  margin: 20px !important;
+}
+
+.form-control{
+  width:30% !important;
+  margin-left: 35% !important;
+  text-align: center;
+}
+
+input{
+  margin-top: -10px !important;
+}
+
+p{
+  margin-top: 20px !important;
 }

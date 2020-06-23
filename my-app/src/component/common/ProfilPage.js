@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class ProfilPage extends Component {
   render() {
     return (
-      <div>
-    <h2>Profile</h2>
-   <button onClick={() => handleCreateNewUser()}>Register</button>
+      <div className="container">
+    <h3 class="display-5" >Profile</h3>
+   <button class="btn btn-primary btn-lg" onClick={() => handleCreateNewUser()}>Register</button>
    </div>
     )
   }

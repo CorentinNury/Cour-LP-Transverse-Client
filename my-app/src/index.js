@@ -7,6 +7,7 @@ import "./style/index.css";
 import * as serviceWorker from "./serviceWorker";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient, { InMemoryCache, gql } from 'apollo-boost';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //npm install apollo-boost @apollo/react-hooks graphql
 
 const client = new ApolloClient({

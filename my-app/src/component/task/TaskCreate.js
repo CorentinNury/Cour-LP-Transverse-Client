@@ -56,42 +56,44 @@ function AddTask() {
           project.value= '';
         }}
       >
-      <p>Nom Tache:</p>
-      <input
+      <p>Task name</p>
+      <input  class="form-control"
         ref={node => {
           name = node;
         }}
       />
-      <p>Description:</p>
-      <input
+      <p>Description</p>
+      <input class="form-control"
         ref={node => {
           description = node;
         }}
       />
-      <p>Durée:</p>
-      <input
+      <p>Lenght</p>
+      <input  class="form-control"
         ref={node => {
           duration = node;
         }}
       />
-       <p>Nombre Priorité:</p>
-      <input
+       <p>Priority</p>
+      <input  class="form-control"
         ref={node => {
           priority = node;
         }}
       />
-    <select name="project" id="project-select" ref={node => {
+      <div>
+    <select  class="form-control" name="project" id="project-select" ref={node => {
           project = node;
         }}>
-    <option value="">--Please choose a Project--</option>
+    <option value="">Choose a Project</option>
     {console.log(data)}
     {data.projects.map(item =>
     <option value={item._id} >{item.name}</option> 
     )}
 </select>
+</div>
       <div className="margin-v-m">
 
-      <button type="submit" className="btn-primary">Ajouter Tache </button>
+      <button type="submit" class="btn btn-primary btn-lg">Ajouter Tache </button>
       </div>
       </form>
     </div>

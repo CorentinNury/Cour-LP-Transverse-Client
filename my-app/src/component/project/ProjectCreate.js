@@ -27,20 +27,20 @@ function AddProject() {
           }}
         >
         <p>Title:</p>
-        <input
+        <input  class="form-control"
           ref={node => {
             name = node;
           }}
         />
         <p>Description:</p>
-        <input
+        <input  class="form-control"
           ref={node => {
             description = node;
           }}
         />
         <div className="margin-v-m">
 
-        <button type="submit" className="btn-primary">Create project</button>
+        <button type="submit" class="btn btn-primary btn-lg">Create project</button>
         </div>
         </form>
       </div>
@@ -52,7 +52,7 @@ class ProjetDetail extends Component {
     console.log(this);
     return (
       <div className="container">
-        <h4>Create a new project</h4>
+        <h3 class="display-5" >Create a new project</h3>
         <AddProject />
       </div>
     );

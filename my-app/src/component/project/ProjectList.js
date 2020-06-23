@@ -49,20 +49,16 @@ function Projects(arg) {
          
           <div className="project-item-action">
             <IoIosClose onClick={() => deleteProject({ variables: { id: item._id } }) } fontSize="1.75em"/>
-            <button className="btn-primary" onClick={() => changeRoute(arg.props,("/project/" + item._id.toString()) )}>View</button>
+            <button class="btn btn-primary" onClick={() => changeRoute(arg.props,("/project/" + item._id.toString()) )}>View</button>
           </div>
         </li>
       )}
-      <li className="project-list-item" onClick={() => handleCreateNewProject(arg.props)}>
-          <div className="project-item-action" style={{
-            padding: "1em"
-          }}>
+      <li  className="project-list-item" onClick={() => handleCreateNewProject(arg.props)}>
+          <div class="btn btn-primary btn">
             <FaPlusSquare fontSize="1.5em"/>
           </div>
          <div className="project-item-detail">
-            <h3>
-              Create a new project
-            </h3>
+         <h3 class="display-5" >Create a new project</h3>
           </div>
         </li>
     </ul>
@@ -89,7 +85,7 @@ class ProjetList extends React.Component {
   render() {
     return (
       <div className="container">
-        <h4>List of all projects.</h4>
+        <h3 class="display-5" >List of all projects</h3>
         <Projects props={this.props}/>
       </div>
     );

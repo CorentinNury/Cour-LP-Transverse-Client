@@ -37,13 +37,13 @@ function AddUser() {
           }}
         >
         <p>Name User</p>
-        <input
+        <input  class="form-control"
           ref={node => {
             name = node;
           }}
         />
         <p>Password User</p>
-        <input
+        <input class="form-control"
           ref={node => {
             password = node;
           }}
@@ -51,7 +51,7 @@ function AddUser() {
         
         <div className="margin-v-m">
 
-        <button type="submit" className="btn-primary">Create User</button>
+        <button  type="submit"  class="btn btn-primary btn-lg" >Create User</button>
         </div>
         </form>
       </div>

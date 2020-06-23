@@ -6,20 +6,20 @@ class Navbar extends Component {
   render() {
     return (
       <nav>
-        <ul className="nav-list">
-          <Link to="/home">
+        <ul  className="nav-list">
+          <Link class="btn btn-primary btn-lg" to="/home">
             <li>
               <FaHome />
               <p>Home</p>
             </li>
           </Link>
-          <Link to="/me">
+          <Link class="btn btn-primary btn-lg" to="/me">
             <li>
               <FaRegUserCircle />
               <p>Profile</p>
             </li>
           </Link>
-          <Link to="/projects">
+          <Link class="btn btn-primary btn-lg" to="/projects">
             <li>
               <FaProjectDiagram />
               <p>Projects</p>

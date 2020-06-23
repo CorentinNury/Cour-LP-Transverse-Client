@@ -8,21 +8,32 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "apollo-boost": "^0.4.9",
+    "autoprefixer": "^9.8.3",
+    "bootstrap": "^4.5.0",
+    "css-loader": "^3.6.0",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start2": "webpack-dev-server --hot --mode development"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -15,7 +15,6 @@ const GET_PROJECT = gql`
         _id
         name
         description
-        status
       }
     }
   }
@@ -32,15 +31,19 @@ function Project({ arg, id }) {
   if (error) return `Error! ${error.message}`;
 
   const project = data.project;
-  console.log("Data received from Project: ", project);
+ 
   return (
+    
     <div>
-      <h2>
-        {project.name}
-      </h2>
+      <h2>Detail projet</h2>
       <p>
-        {project.description}
+       Nom Projet: {data.project.name}
       </p>
+      <p>
+        Description: {project.description}
+      </p>
+      <h3>Detail Tache</h3>
+      {project.tasks != null &&
       <ul>
         {project.tasks.map(item =>
           <li key={item._id} value={item.name} className="project-list-item" onClick={() => changeRoute(arg, ("/task/" + item._id.toString()))}>
@@ -61,12 +64,12 @@ function Project({ arg, id }) {
               <IoMdCheckmark
                 fontSize="1.75em"
                 color="lightseagreen"
-                onClick={callMutationToValidateTask}
+                
               />
             </div>
           </li>
         )}
-        <li className="project-list-item" onClick={callMutation}>
+        <li className="project-list-item" onClick={() => changeRoute(arg,"/create/task")}>
           <div
             className="project-item-action"
             style={{
@@ -80,8 +83,8 @@ function Project({ arg, id }) {
           </div>
         </li>
       </ul>
-
-      {project.tasks.length === 0 &&
+}
+{project.tasks != null &&
         <div
           style={{
             display: "flex",
@@ -95,19 +98,14 @@ function Project({ arg, id }) {
             src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/no_data_qbuo.svg"
           />
           <h4>This project did not contain any task.</h4>
-        </div>}
+        </div>
+        }
     </div>
   );
 }
 
-function callMutationToValidateTask() {
-  alert("Development information: \n Call a mutation to validate this task");
-}
 function callMutationToCancelTask() {
   alert("Development information: \n Call a mutation to cancel this task");
-}
-function callMutation() {
-  alert("Development information: \n Call a mutation to add a new task");
 }
 
 function changeRoute(props, route) {

@@ -11,6 +11,9 @@ import ProjectDetail from "./component/project/ProjectDetail";
 import ProjectCreate from "./component/project/ProjectCreate";
 import Header from "./component/common/Header";
 import Navbar from "./component/common/Navbar";
+import UserCreate from "./component/user/UserCreate";
+import UserLogin from "./component/user/UserLogin";
+import TaskCreate from "./component/task/TaskCreate";
 
 function App() {
   return (
@@ -41,6 +44,15 @@ function App() {
         </Route>
         <Route path="/new-project">
             <ProjectCreate />
+        </Route>
+        <Route path="/new-user">
+            <UserCreate />
+        </Route>
+        <Route path="/login">
+            <UserLogin />
+        </Route>
+        <Route path="/create/task">
+            <TaskCreate />
         </Route>
       </Switch>
       <Navbar/>

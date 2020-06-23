@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { useQuery } from "@apollo/react-hooks";
+import { useQuery,useMutation } from "@apollo/react-hooks";
 import { IoIosClose, IoMdCheckmark } from "react-icons/io";
 import { FaPlusSquare } from "react-icons/fa";
 import { withRouter } from "react-router-dom";
@@ -20,12 +20,19 @@ const GET_PROJECT = gql`
   }
 `;
 
+const DELETE_TASK = gql`
+    mutation deleteTask($idTask: ID!) {
+    deleteTask(_id: $idTask)
+  }
+`;
+
 function Project({ arg, id }) {
   const { loading, error, data } = useQuery(GET_PROJECT, {
     variables: { id }
   });
+  const  [deleteTask, idTask ]= useMutation(DELETE_TASK);
 
-  console.log(arg, id)
+
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
@@ -37,7 +44,7 @@ function Project({ arg, id }) {
     <div>
       <h2>Detail projet</h2>
       <p>
-       Nom Projet: {data.project.name}
+       Nom Projet: {project.name}
       </p>
       <p>
         Description: {project.description}
@@ -59,13 +66,9 @@ function Project({ arg, id }) {
               <IoIosClose
                 fontSize="1.75em"
                 color="tomato"
-                onClick={callMutationToCancelTask}
+                onClick={() => deleteTask({ variables: { idTask: item._id } })}
               />
-              <IoMdCheckmark
-                fontSize="1.75em"
-                color="lightseagreen"
-                
-              />
+              
             </div>
           </li>
         )}
@@ -84,7 +87,7 @@ function Project({ arg, id }) {
         </li>
       </ul>
 }
-{project.tasks != null &&
+{project.tasks <=0 &&
         <div
           style={{
             display: "flex",
@@ -102,10 +105,6 @@ function Project({ arg, id }) {
         }
     </div>
   );
-}
-
-function callMutationToCancelTask() {
-  alert("Development information: \n Call a mutation to cancel this task");
 }
 
 function changeRoute(props, route) {

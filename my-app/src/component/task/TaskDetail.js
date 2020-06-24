@@ -31,9 +31,8 @@ function Task({ arg, id }) {
  
   return (
     <div>
-      <h2>Detail of task</h2>
+      <h2>{task.name}</h2>
       
-      <p>Name: {task.name}</p>
       <p>Description: {task.description}</p>
       <p>Duration: {task.duration}</p>
       <p>Priority: {task.priority}</p>

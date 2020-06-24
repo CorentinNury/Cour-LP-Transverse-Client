@@ -51,7 +51,7 @@ function AddUser() {
         
         <div className="margin-v-m">
 
-        <button  type="submit"  class="btn btn-primary btn-lg" >Create User</button>
+        <button  type="submit"  class="btn btn-primary btn-lg" >Create</button>
         </div>
         </form>
       </div>
@@ -63,7 +63,7 @@ class UserPage extends Component {
     console.log(this);
     return (
       <div className="container">
-        <h4>Create a new User</h4>
+        <h4>Create an account</h4>
         <AddUser />
       </div>
     );

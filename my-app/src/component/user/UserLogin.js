@@ -38,13 +38,13 @@ function LoginUser(args) {
           }}
         >
         <p>Name User</p>
-        <input
+        <input class="form-control"
           ref={node => {
             name = node;
           }}
         />
         <p>Password User</p>
-        <input
+        <input class="form-control"
           ref={node => {
             password = node;
           }}type="password"
@@ -52,7 +52,7 @@ function LoginUser(args) {
         
         <div className="margin-v-m">
 
-        <button type="submit" className="btn-primary">Login User</button>
+        <button type="submit" class="btn btn-primary btn-lg">Login</button>
         </div>
         </form>
       </div>

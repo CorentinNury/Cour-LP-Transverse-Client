@@ -52,7 +52,7 @@ class ProjetDetail extends Component {
     console.log(this);
     return (
       <div className="container">
-        <h3 class="display-5" >Create a new project</h3>
+        <h3 class="display-5" >Create</h3>
         <AddProject />
       </div>
     );

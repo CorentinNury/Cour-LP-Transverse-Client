@@ -35,7 +35,7 @@ class HomePage extends Component {
     console.log(this.state)
       return (
         <div className="container">
-        <h3>HomePage</h3>
+        <h3>Home</h3>
         <p>Now we have:</p>
         <ul>
           <li>A server with GraphQL enable</li>
@@ -52,8 +52,8 @@ class HomePage extends Component {
           <li><strong>GetTask</strong>: get a task by id</li>
         </ul>
         <p>Database: Mongo db</p>
-        <p>API: <button><a href="http://localhost:4000/" style={{color:"lightseagreen"}}>graphql</a></button></p>
-        <p>Icon: react-icon</p>
+        <p>API:</p>
+        <button href="http://localhost:4000/" class="btn btn-primary btn-lg">GraphQL</button>
       </div>
     
     );

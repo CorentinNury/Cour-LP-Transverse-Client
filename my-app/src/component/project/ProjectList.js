@@ -37,30 +37,31 @@ function Projects(arg) {
     <ul>
       {data.projects.map(item =>
         <li key={item._id} value={item.name} className="project-list-item">
-          <h3>{item.name}</h3>
-          
-          
-         <div className="project-item-detail">
+        
+        <div>
+        <button class="btn btn-primary" onClick={() => changeRoute(arg.props,("/project/" + item._id.toString()) )}><h3>{item.name}</h3></button>
+        </div>
+        
+        <div className="project-item-detail">
+          <p>{item.tasks.length} tasks in this project.</p>   
+        </div>
          
-            <p>
-              {item.tasks.length} tasks in this project.
-            </p>   
-          </div>
-         
-          <div className="project-item-action">
+        <div className="project-item-action">
             <IoIosClose onClick={() => deleteProject({ variables: { id: item._id } }) } fontSize="1.75em"/>
-            <button class="btn btn-primary" onClick={() => changeRoute(arg.props,("/project/" + item._id.toString()) )}>View</button>
-          </div>
+        </div>
+
         </li>
-      )}
-      <li  className="project-list-item" onClick={() => handleCreateNewProject(arg.props)}>
-          <div class="btn btn-primary btn">
-            <FaPlusSquare fontSize="1.5em"/>
-          </div>
+  )
+      }
+     
+
          <div className="project-item-detail">
+         <button class="btn btn-primary" onClick={() => handleCreateNewProject(arg.props)}>
          <h3 class="display-5" >Create a new project</h3>
-          </div>
-        </li>
+          </button>
+        </div>
+        
+      
     </ul>
   );
 }

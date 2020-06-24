@@ -93,7 +93,7 @@ function AddTask() {
 </div>
       <div className="margin-v-m">
 
-      <button type="submit" class="btn btn-primary btn-lg">Ajouter Tache </button>
+      <button type="submit" class="btn btn-primary btn-lg">Add</button>
       </div>
       </form>
     </div>

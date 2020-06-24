@@ -42,70 +42,46 @@ function Project({ arg, id }) {
   return (
     
     <div>
-      <h2>Detail projet</h2>
-      <p>
-       Nom Projet: {project.name}
-      </p>
+      <h2>{project.name}</h2>
       <p>
         Description: {project.description}
       </p>
-      <h3>Detail Tache</h3>
+      <h3>Task</h3>
       {project.tasks != null &&
       <ul>
-        {project.tasks.map(item =>
-          <li key={item._id} value={item.name} className="project-list-item" onClick={() => changeRoute(arg, ("/task/" + item._id.toString()))}>
-            <div className="project-item-detail">
-              <h3>
-                {item.name}
-              </h3>
-              <p>
-                {item.description}
-              </p>
+        {project.tasks.map(item => 
+          
+          <li key={item._id} value={item.name} className="project-list-item">
+            
+            <div>
+              <button class="btn btn-primary" onClick={() => changeRoute(arg, ("/task/" + item._id.toString()))}> <h3>{item.name}</h3></button>
             </div>
+
+            <div className="project-item-detail">
+        </div>
+
             <div className="project-item-action">
-              <IoIosClose
-                fontSize="1.75em"
-                color="tomato"
-                onClick={() => deleteTask({ variables: { idTask: item._id } })}
-              />
-              
+              <IoIosClose fontSize="1.75em" color="tomato" onClick={() => deleteTask({ variables: { idTask: item._id } })}/>
             </div>
           </li>
-        )}
-        <li className="project-list-item" onClick={() => changeRoute(arg,"/create/task")}>
-          <div
-            className="project-item-action"
-            style={{
-              padding: "1em"
-            }}
-          >
-            <FaPlusSquare fontSize="1.5em" />
-          </div>
-          <div className="project-item-detail">
-            <h3>Add new task</h3>
-          </div>
-        </li>
+        )
+        }
       </ul>
 }
 {project.tasks <=0 &&
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column"
-          }}
-        >
-          <img
-            width="10%"
-            alt="Not found"
-            src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/no_data_qbuo.svg"
-          />
-          <h4>This project did not contain any task.</h4>
-        </div>
-        }
+  <div style={{ display: "flex", alignItems: "center", flexDirection: "column" }} >
+    <img width="10%" alt="Not found" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/no_data_qbuo.svg"/>
+    <h4>This project did not contain any task.</h4>
+</div>
+}
+<div className="project-item-detail">
+  <button class="btn btn-primary"  onClick={() => changeRoute(arg,"/create/task")}>
+    <h3 class="display-5" >Add new task</h3>
+  </button>
+</div>
     </div>
   );
-}
+} 
 
 function changeRoute(props, route) {
   console.log(props, route);

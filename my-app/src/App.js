@@ -19,7 +19,8 @@ function App() {
   return (
     <div className="App">   
     <Header/>   
-     
+    <Navbar/>
+
       <Switch className="flex-1">
         <Route path="/home">
           <HomePage />
@@ -55,7 +56,6 @@ function App() {
             <TaskCreate />
         </Route>
       </Switch>
-      <Navbar/>
     </div>
   );
 }

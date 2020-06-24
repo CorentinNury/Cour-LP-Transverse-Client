@@ -13,7 +13,7 @@ const LOGIN_USER = gql`
   }
 `;
 
-function LoginUser() {
+function LoginUser(args) {
     let name;
     let password;
    
@@ -27,11 +27,14 @@ function LoginUser() {
             loginUser({ variables: {
                 name: name.value, 
                 password: password.value} 
-            });
-            
+            }
+            ).then(() => {
+              args.props.history.push("/projects");
+          })
+
             name.value = '';
             password.value = '';
-            
+
           }}
         >
         <p>Name User</p>
@@ -44,7 +47,7 @@ function LoginUser() {
         <input
           ref={node => {
             password = node;
-          }}
+          }}type="password"
         />
         
         <div className="margin-v-m">
@@ -62,7 +65,7 @@ class UserPage extends Component {
     return (
       <div className="container">
         <h4>Login User</h4>
-        <LoginUser />
+        <LoginUser props={this.props}/>
       </div>
     );
   }

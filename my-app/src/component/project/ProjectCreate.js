@@ -49,7 +49,7 @@ function AddProject() {
 
 class ProjetDetail extends Component {
   render() {
-    console.log(this);
+    
     return (
       <div className="container">
         <h3 class="display-5" >Create</h3>

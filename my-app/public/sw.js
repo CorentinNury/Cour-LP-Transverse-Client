@@ -1,9 +1,9 @@
-console.log("Mon Service ");
+
 
 var CACHE = "cache-update-and-refresh";
 
 self.addEventListener("install", function(evt) {
-  console.log("The service worker is being installed.");
+ 
   evt.waitUntil(
     caches.open(CACHE).then(function(cache) {
       cache.addAll(["./index.html", "./assets"]);
@@ -12,7 +12,7 @@ self.addEventListener("install", function(evt) {
 });
 
 self.addEventListener("fetch", function(evt) {
-  console.log("The service worker is serving the asset.");
+  
   evt.respondWith(fromCache(evt.request));
   evt.waitUntil(update(evt.request).then(refresh));
 });

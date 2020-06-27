@@ -61,7 +61,7 @@ function LoginUser(args) {
 
 class UserPage extends Component {
   render() {
-    console.log(this);
+    
     return (
       <div className="container">
         <h4>Login User</h4>

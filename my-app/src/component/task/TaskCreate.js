@@ -85,7 +85,7 @@ function AddTask() {
           project = node;
         }}>
     <option value="">Choose a Project</option>
-    {console.log(data)}
+    
     {data.projects.map(item =>
     <option value={item._id} >{item.name}</option> 
     )}

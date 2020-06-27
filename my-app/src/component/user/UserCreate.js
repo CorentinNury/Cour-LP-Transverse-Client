@@ -60,7 +60,7 @@ function AddUser() {
 
 class UserPage extends Component {
   render() {
-    console.log(this);
+    
     return (
       <div className="container">
         <h4>Create an account</h4>

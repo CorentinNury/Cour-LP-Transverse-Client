@@ -84,13 +84,13 @@ function Project({ arg, id }) {
 } 
 
 function changeRoute(props, route) {
-  console.log(props, route);
+  
   props.history.push(route);
 }
 
 class ProjetDetail extends Component {
   render() {
-    console.log(this);
+    
     return (
       <div className="container">
         <Project arg={this.props} id={this.props.match.params.id} />

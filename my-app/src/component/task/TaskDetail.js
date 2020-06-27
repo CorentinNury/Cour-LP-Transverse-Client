@@ -45,7 +45,7 @@ function Task({ arg, id }) {
 
 class TaskDetail extends Component {
   render() {
-    console.log(this);
+    
     return (
       <div className="container">
         <Task arg={this.props} id={this.props.match.params.id} />

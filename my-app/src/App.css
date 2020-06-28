@@ -147,3 +147,9 @@ p{
 {  
   color: white !important;
 }
+
+button.btn-primary{
+  background-color: #6e0000 !important;
+  border-color: #ffffff !important;
+  transition: white
+}
